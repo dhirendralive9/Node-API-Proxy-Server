@@ -15,6 +15,10 @@ const limiter = rateLimit({
     app.use(limiter);
     app.set('trust proxy',1)
 
+//set static folder    
+app.use(express.static('public'))
+
+
 // /enable cors
 app.use(cors());
 
